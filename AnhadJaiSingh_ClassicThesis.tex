@@ -34,6 +34,10 @@
 
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011 } % Set the width of the date box in each block
 
+\newlength{\anotherdatebox}\settowidth{\anotherdatebox}{Jan'12--Feb'12} % Set the width of the date box in each block
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
 \newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
 
@@ -81,25 +85,49 @@ I am a Final Year Computer Science Undergrad, graduating in '15.}
 \NewEntry{Feb '14--Cont.}{Junior System Administrator --- Hyderabad}
 
 \Description{\MarginText{IIIT Hyderabad}Working as Junior System Administrator, managing and
-maintaining the Institute's Servers used by over 2000 users.}
+maintaining the Institute's Servers used by over 2000 users.
+% \linebreak
+% Can add atmost 3 lines here, without overflowing into next page.
+% Line1\linebreak
+% Line2\linebreak
+% Line3
+}
 
 %------------------------------------------------
 
 \NewEntry{May-Aug '14}{Release Engineering Intern  --- San Francisco}
 
-\Description{\MarginText{Mozilla}Worked with Mozilla's globally distributed team of Release
-Engineers to develop a new software update generation system.\\ Reference: Hal \textsc{Wine}\ \
-$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@mozilla.com}{hwine@mozilla.com}}
+\Description{\MarginText{Mozilla}Designed and developed a cloud based scalable system to generate incremental updates for Mozilla's
+browser based products with the objective of reducing the time and computational resources required
+to do so. \linebreak \linebreak The new system `Funsize' reduced update generation time by up to
+80\% and increased effective partial generation capacity by 4 times. The accompanying webAPI
+uncouples the system from the build pipeline and allows flexibility to request for update bundles
+based on need. \linebreak \linebreak Co-ordinated with Mozilla's globally distributed team of Release
+Engineers to design Funsize while ensuring system integrity and use-case coverage.  \linebreak \linebreak Presentation at
+the Mozilla San Francisco Office: \href{https://air.mozilla.org/firefox-and-its-updates/}{Firefox
+and it's Updates} \linebreak 
+
+Reference: Hal \textsc{Wine}\ \ $\cdotp$\ Sr. Release Engineer \ $\cdotp$\
+\href{mailto:hwine@mozilla.com}{hwine@mozilla.com}}
 
 %------------------------------------------------
 
 \NewEntry{Jun-Aug '13}{Automation \& Tools Intern, Mozilla --- Remote}
 
-\Description{\MarginText{Google Summer of Code}Worked with Mozilla's Automation and Tools Team remotely
-to analyze and improve test coverage for internal python libraries. \\ Reference: Clint \textsc{Talbert}\
+\Description{\MarginText{Google Summer of Code}Identified, Analyzed and Documented gaps in existing test coverage for nine python utility libraries, collectively called `Mozbase' used for all Mozilla automation. \linebreak \linebreak
+Increased test coverage to 166\% of the original (based on function coverage), thus allowing the
+team to be far more effective when changing behaviour or introducing new
+features. \linebreak \linebreak
+Co-ordinated with Mozilla's global team of Automation and QA engineers while working remotely to improve test coverage and
+met with each functional area owner to ensure all necessary use cases and steps were covered during
+the test coverage expansion. \linebreak
+
+Reference: Clint \textsc{Talbert}\
 $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:ctalbert@mozilla.com}{ctalbert@mozilla.com}}
 
 %------------------------------------------------
+
+\pagebreak % Forcing pagebreak here.
 
 \vspace{1em} % Extra space between major sections
 
@@ -131,46 +159,46 @@ Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC
 
 %------------------------------------------------
 
-\pagebreak
-
-\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	PROJECTS
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Projects}\vspace{1em}
-
-\NewEntry{Summer '14}{Funsize: Update Partials on Demand} 
-
-\Description{\MarginText{Release Engineering, Mozilla}Designed and developed a cloud based scalable
-system to generate incremental updates for Mozilla's browser based products with the objective
-of reducing the time and computational resources required to do so. \linebreak \linebreak The
-new system `Funsize' reduced update generation time by up to 80\% and increased effective
-partial generation capacity by 4 times. The accompanying webAPI uncouples the system from the
-build pipeline and allows flexibility to request for update bundles based on need. \linebreak
-\linebreak Co-ordinated with a globally distributed team of Release Engineers to ensure system
-integrity and use-case coverage.  \linebreak %\linebreak
-Presentation at the Mozilla San Francisco Office: \href{https://air.mozilla.org/firefox-and-its-updates/}{Firefox and it's Updates}}
-%\linebreak \textsc{Mentor:} Hal Wine (Sr. Release Engineer)} 
-%------------------------------------------------
-
-\NewEntry{Summer '13}{Unit-Testing Mozbase}
-
-\Description{\MarginText{Summer of Code, Automation \& Tools Team, Mozilla}Identified, Analyzed and
-Documented gaps in existing test coverage for nine python utility libraries used for all Mozilla
-automation. \linebreak \linebreak
-Increased test coverage to 166\% of the original (based on function coverage), thus allowing the
-team to be far more effective when changing behaviour or introducing new
-features. \linebreak \linebreak
-Co-ordinated with a global team of Automation and QA engineers while
-working remotely and met with each functional area owner to ensure all necessary use cases and steps
-were covered during the test coverage expansion.}
-%\linebreak \linebreak \textsc{Mentor:} Clint Talbert (Director QA and automaion)}
-
-%------------------------------------------------
-
-\vspace{1em} % Extra space between major sections
+%%   \pagebreak
+%%   
+%%   \vspace{1em} % Extra space between major sections
+%%   
+%%   %----------------------------------------------------------------------------------------
+%%   %	PROJECTS
+%%   %----------------------------------------------------------------------------------------
+%%   
+%%   \spacedlowsmallcaps{Projects}\vspace{1em}
+%%   
+%%   \NewEntry{Summer '14}{Funsize: Update Partials on Demand} 
+%%   
+%%   \Description{\MarginText{Release Engineering, Mozilla}Designed and developed a cloud based scalable
+%%   system to generate incremental updates for Mozilla's browser based products with the objective
+%%   of reducing the time and computational resources required to do so. \linebreak \linebreak The
+%%   new system `Funsize' reduced update generation time by up to 80\% and increased effective
+%%   partial generation capacity by 4 times. The accompanying webAPI uncouples the system from the
+%%   build pipeline and allows flexibility to request for update bundles based on need. \linebreak
+%%   \linebreak Co-ordinated with a globally distributed team of Release Engineers to ensure system
+%%   integrity and use-case coverage.  \linebreak %\linebreak
+%%   Presentation at the Mozilla San Francisco Office: \href{https://air.mozilla.org/firefox-and-its-updates/}{Firefox and it's Updates}}
+%%   %\linebreak \textsc{Mentor:} Hal Wine (Sr. Release Engineer)} 
+%%   %------------------------------------------------
+%%   
+%%   \NewEntry{Summer '13}{Unit-Testing Mozbase}
+%%   
+%%   \Description{\MarginText{Summer of Code, Automation \& Tools Team, Mozilla}Identified, Analyzed and
+%%   Documented gaps in existing test coverage for nine python utility libraries used for all Mozilla
+%%   automation. \linebreak \linebreak
+%%   Increased test coverage to 166\% of the original (based on function coverage), thus allowing the
+%%   team to be far more effective when changing behaviour or introducing new
+%%   features. \linebreak \linebreak
+%%   Co-ordinated with a global team of Automation and QA engineers while
+%%   working remotely and met with each functional area owner to ensure all necessary use cases and steps
+%%   were covered during the test coverage expansion.}
+%%   %\linebreak \linebreak \textsc{Mentor:} Clint Talbert (Director QA and automaion)}
+%%   
+%%   %------------------------------------------------
+%%   
+%%   \vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	ACADEMIC PROJECTS
@@ -196,6 +224,33 @@ MIT Vision and Modelling group. '}
 \vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+\Description{\MarginText{Bachelor's CS\&E}2011--2015\ \ $\cdotp$\ \ International Institute of Information and Technology, Hyderabad}
+
+%----------------------------------------------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%       RESPONSIBILITIES.
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Responsibilites}\vspace{0.5em}
+
+\Description{\MarginText{Technical Lead}\makebox[\anotherdatebox][l]{\emph{Oct '13 -- Feb '14}}$\cdotp$\ \ Felicity '14, Annual Technical Festival, IIIT-Hyderabad}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+\Description{\MarginText{Teaching Assistant}\makebox[\anotherdatebox][l]{\emph{Spring '14}}$\cdotp$\ \ Formal Methods}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+\Description{\MarginText{Teaching Assistant}\makebox[\anotherdatebox][l]{\emph{Monsoon '13}}$\cdotp$\ \ IT Workshop}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
 %	SKILLSET
 %----------------------------------------------------------------------------------------
 
@@ -213,19 +268,12 @@ MIT Vision and Modelling group. '}
 
 \Description{\MarginText{Operating Systems}Linux(Preferred), OSX, Windows}
 
+\Description{\MarginText{}\emph{Always willing to pickup whatever else is needed.}}
+
 %------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Education}\vspace{0.5em}
-
-\Description{\MarginText{Bachelor's CS}2011--2015\ \ $\cdotp$\ \ International Institute of Information and Technology, Hyderabad}
-
-%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	ONLINE HANDLES
