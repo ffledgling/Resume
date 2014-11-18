@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011 } % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\date{} % Remove the date we get at the end of the CV
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Anhad Jai Singh}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{email}{\href{mailto:anhad.jai.singh+resume@gmail.com}{anhad.jai.singh@gmail.com}} % Email address
+
+\NewEntry{website}{\href{http://ffledgling.com}{http://ffledlging.com}} % Personal website
+
+\NewEntry{blog}{\href{http://blog.ffledgling.com}{http://blog.ffledlging.com}} % Blog
+
+\NewEntry{phone}{(M) +91 9989493267} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Aboue Me}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{I'm a Pythonista, Part-Time SysAdmin and Full-Time learner. \linebreak
+Anything to do with Python, Networks, Systems or Open Source excites me.  
+New cutting edge Tools and Technology never fail to fascinate me. \linebreak
+I am a Final Year Computer Science Undergrad, graduating in '15.}
+\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{Feb '14--Cont.}{Junior System Administrator --- Hyderabad}
+
+\Description{\MarginText{IIIT Hyderabad}Working as Junior System Administrator, managing and
+maintaining the Institute's Servers used by over 2000 users.}
+
+%------------------------------------------------
+
+\NewEntry{May-Aug '14}{Release Engineering Intern  --- San Francisco}
+
+\Description{\MarginText{Mozilla}Worked with Mozilla's globally distributed team of Release
+Engineers to develop a new software update generation system.\\ Reference: Hal \textsc{Wine}\ \
+$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@mozilla.com}{hwine@mozilla.com}}
+
+%------------------------------------------------
+
+\NewEntry{Jun-Aug '13}{Automation \& Tools Intern, Mozilla --- Remote}
+
+\Description{\MarginText{Google Summer of Code}Worked with Mozilla's Automation and Tools Team remotely
+to analyze and improve test coverage for internal python libraries. \\ Reference: Clint \textsc{Talbert}\
+$\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:ctalbert@mozilla.com}{ctalbert@mozilla.com}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Volunteer Experience}\vspace{1em}
+
+\NewEntry{Jun '14--Cont.}{Community Building, \textsc{Release Engineering}}
+
+\Description{\MarginText{Mozilla}Recognized for bringing in and mentoring new contributors. Helped make the team's work more approachable for new volunteers.}
+
+%------------------------------------------------
+
+\NewEntry{Dec '12-'13}{Volunteer Contributor, \textsc{Automation \& Tools}}
+
+\Description{\MarginText{Mozilla}Helped fix numerous bugs across different test suites and testing frameworks.} 
+
+%------------------------------------------------
+
+\NewEntry{May '13--Cont.}{Head, \textsc{Open Source Development Group}}
+
+\Description{\MarginText{Open Source Development Group, IIIT-H}Built awareness about F/OSS
+software, encouraged contributions to the community. Organized talks and hackathons to
+encourage community growth and learning. Greater awareness and encouragement helped increase the
+Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC} '14).
+\\ Regular writer for the Group's Technical Blog.}
+
+%------------------------------------------------
+
+\pagebreak
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Projects}\vspace{1em}
+
+\NewEntry{Summer '14}{Funsize: Update Partials on Demand} 
+
+\Description{\MarginText{Release Engineering, Mozilla}Designed and developed a cloud based scalable
+system to generate incremental updates for Mozilla's browser based products with the objective
+of reducing the time and computational resources required to do so. \linebreak \linebreak The
+new system `Funsize' reduced update generation time by up to 80\% and increased effective
+partial generation capacity by 4 times. The accompanying webAPI uncouples the system from the
+build pipeline and allows flexibility to request for update bundles based on need. \linebreak
+\linebreak Co-ordinated with a globally distributed team of Release Engineers to ensure system
+integrity and use-case coverage.  \linebreak %\linebreak
+Presentation at the Mozilla San Francisco Office: \href{https://air.mozilla.org/firefox-and-its-updates/}{Firefox and it's Updates}}
+%\linebreak \textsc{Mentor:} Hal Wine (Sr. Release Engineer)} 
+%------------------------------------------------
+
+\NewEntry{Summer '13}{Unit-Testing Mozbase}
+
+\Description{\MarginText{Summer of Code, Automation \& Tools Team, Mozilla}Identified, Analyzed and
+Documented gaps in existing test coverage for nine python utility libraries used for all Mozilla
+automation. \linebreak \linebreak
+Increased test coverage to 166\% of the original (based on function coverage), thus allowing the
+team to be far more effective when changing behaviour or introducing new
+features. \linebreak \linebreak
+Co-ordinated with a global team of Automation and QA engineers while
+working remotely and met with each functional area owner to ensure all necessary use cases and steps
+were covered during the test coverage expansion.}
+%\linebreak \linebreak \textsc{Mentor:} Clint Talbert (Director QA and automaion)}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	ACADEMIC PROJECTS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Academic Projects}\vspace{1em}
+
+\NewEntry{Monsoon '13}{Attendance System} 
+
+\Description{\MarginText{Statistical Methods in AI}Developed a prototype of a photograph based
+    Attendance system. \linebreak
+    The prototype showed over 75\% recognition accuracy and involved Facial Recognition utilizing
+    PCA, Eigen Vectors, SVM and research from ` Turk \& Pentland: Eigenfaces for Recognition 1991,
+MIT Vision and Modelling group. '}
+%------------------------------------------------
+
+\NewEntry{Spring '14}{Search Engine}
+
+\Description{\MarginText{Information Retrieval and Extraction}Designed and implemented a prototype search engine in python which utilizes Natural Language processing libraries for keyword extraction and performs indexing based on a Posting list and inverted Indices. Tests on the Wikipedia corpus showed good Relevance with both Human subjects and DCG based methods.}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	SKILLSET
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Skill Set}\vspace{1em}
+
+\Description{\MarginText{Proficient}\textsc{Python}, \textsc{Bash}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Basic}\textsc{C}, \textsc{C++}, \textsc{PHP}, \textsc{Javascript},
+\textsc{Racket}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Version Control}\textsc{Git}, \textsc{Mercurial}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Operating Systems}Linux(Preferred), OSX, Windows}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+\Description{\MarginText{Bachelor's CS}2011--2015\ \ $\cdotp$\ \ International Institute of Information and Technology, Hyderabad}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	ONLINE HANDLES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Online Aliases}\vspace{0.5em}
+
+\Description{\MarginText{}Github\ \ $\cdotp$\ \ \href{https://github.com/ffledgling}{ffledgling}\linebreak
+Twitter\ \ $\cdotp$\ \ \href{https://twitter.com/ffledgling}{ffledgling}}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
