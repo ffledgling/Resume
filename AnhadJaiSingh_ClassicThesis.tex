@@ -29,7 +29,7 @@
 
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
 
-\usepackage{hyperref} % Required for adding links	and customizing them
+\usepackage{hyperref} % Required for adding links and customizing them
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
 
 \newlength{\datebox}\settowidth{\datebox}{Spring 2011 } % Set the width of the date box in each block
@@ -56,20 +56,20 @@
 
 \NewEntry{email}{\href{mailto:anhad.jai.singh+resume@gmail.com}{anhad.jai.singh@gmail.com}} % Email address
 
-\NewEntry{website}{\href{http://ffledgling.com}{http://ffledlging.com}} % Personal website
+\NewEntry{website}{\href{https://ffledgling.com}{https://ffledlging.com}} % Personal website
 
-\NewEntry{blog}{\href{http://blog.ffledgling.com}{http://blog.ffledlging.com}} % Blog
+\NewEntry{blog}{\href{https://blog.ffledgling.com}{https://blog.ffledlging.com}} % Blog
 
 \NewEntry{phone}{(M) +91 9989493267} % Phone number(s)
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
-\noindent\spacedlowsmallcaps{Aboue Me}\vspace{1em} % Goal heading, could be used for a quotation or short profilEx-n and Full-Time learner. \linebreak
+\noindent\spacedlowsmallcaps{About Me}\vspace{1em} % Goal heading, could be used for a quotation or short profile 
 
-\Description{I'm a Pythonista, Ex-SysAdmin and Full-Time learner. \linebreak
-Anything to do with Python, Networks, Linux, Distributed Systems or Open Source excites me.  
-New cutting edge Tools and Technology never fail to fascinate me. \linebreak}
-\vspace{2em} % Goal text
+\Description{I'm a curious guy, I ask questions and I like to learn. \linebreak
+I try to stay on the cutting edge of tools, technology and culture. \linebreak
+Interested in all things Networking, Linux, Containers, Distributed Systems and Open Source.}
+\vspace{1em} % Goal text
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -77,53 +77,79 @@ New cutting edge Tools and Technology never fail to fascinate me. \linebreak}
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{Aug '15--Cont.}{DevOps Engineer, Core Engineering  --- Gurgaon}
+\NewEntry{\mbox{May'17--Cont.}}{Tech Lead, Cloud Services  --- Gurgaon}
 
-\Description{\MarginText{Tower Research}Working on improving developer workflow
-and productivity by automating and streamlining processes. Worked on
-building and deploying packages for the internal package manager. Designed
-and delivered multiple microservices in wide use today. Currently working
-on revamping build and compute infrastructure using Docker and Kubernetes.\\ Reference: \textsc{Not Available}}
+\Description{\MarginText{Tower Research}Working as part of team building on-prem cloud
+    infrastructure.
+    \begin{itemize}
+        \item On-boarding select clients onto Kubernetes.
+        \item Researched, designed, demoed and currently rolling out custom network ingress, loadbalancing and DNS solutions for on-perm Kubernetes clusters.
+        \item Contributed to \href{https://github.com/PowerDNS/pdns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{pdns} and \href{https://github.com/kubernetes-incubator/external-dns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{external-dns} as part of these efforts.
+    \end{itemize}
+    Reference: Neil \textsc{Tiwari}\ \ $\cdotp$\ Team Manager \ $\cdotp$\
+    \href{mailto:ntiwari@noreply.com}{\textsc{Request Email}}}
+ 
 
 %------------------------------------------------
 
-\NewEntry{May--Jul '15}{Release Engineering Intern  --- San Francisco}
+\NewEntry{\mbox{Aug'15--May'17}}{DevOps, Core Engineering  --- Gurgaon}
+
+\Description{\MarginText{Tower Research}Worked as part of an innately
+cross-functional team to improve developer workflow and productivity by writing tooling to automate
+and streamline processes.
+\begin{itemize}
+    \item Worked as part of a team to build, test and roll out the server-side component of a
+        meta-SCM system that keeps track of cross-project source dependencies, now widely deployed.
+    \item Designed and delivered a simple server-client system used for update notification
+        management of command line tools.
+    \item Designed, proposed and rolled out a revamped, containerized build infrastructure for
+        CI/CD using Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
+        developers in the process.
+\end{itemize}
+    Reference: Rahul \textsc{Balani}\ \ $\cdotp$\ Division Manager \ $\cdotp$\
+    \href{mailto:rbalani@noreply.com}{\textsc{Request Email}}}
+
+%------------------------------------------------
+
+\NewEntry{\mbox{May'15--Jul'15}}{Release Engineering Intern  --- San Francisco}
 
 \Description{\MarginText{Mozilla}Worked with multiple teams within Mozilla to plan and
 execute migrations of existing services and build configurations to newer systems/platforms with
 more robust setups. Most work involved Ansible, Docker, AWS and an
 internal platform called Taskcluster.\\ Reference: Hal \textsc{Wine}\ \
-$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@mozilla.com}{hwine@mozilla.com}}
+$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
 
 %------------------------------------------------
 
 
-\NewEntry{'14 -- Aug'15}{Junior System Administrator --- Hyderabad}
+\NewEntry{\mbox{Feb'14--Aug'15}}{Junior System Administrator --- Hyderabad}
 
 \Description{\MarginText{IIIT Hyderabad}Worked as Junior System Administrator, managing and
 maintaining the Institute's Servers used by over 2000 users.}
 
+% This is a manual page break we toss in because we want logical "sections" to not span across page
+% boundaries
+\pagebreak
 %------------------------------------------------
 
-\NewEntry{May-Aug '14}{Release Engineering Intern  --- San Francisco}
+\NewEntry{\mbox{May'14--Aug'14}}{Release Engineering Intern  --- San Francisco}
 
 \Description{\MarginText{Mozilla}Worked with Mozilla's globally distributed team of Release
-Engineers to develop a new software update generation system called Funsize.\\ Reference: Hal \textsc{Wine}\ \
-$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@mozilla.com}{hwine@mozilla.com}}
+Engineers to develop a new on-demand partial software update generation system for Firefox called Funsize.\\ Reference: Hal \textsc{Wine}\ \
+$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
 
 %------------------------------------------------
 
-\NewEntry{Jun-Aug '13}{Automation \& Tools Intern, Mozilla --- Remote}
+\NewEntry{\mbox{Jun'13-Aug'13}}{Automation \& Tools Intern, Mozilla --- Remote}
 
 \Description{\MarginText{Google Summer of Code}Worked with Mozilla's Automation and Tools Team remotely
-to analyze and improve test coverage for internal python libraries called Mozbase. \\ Reference: Clint \textsc{Talbert}\
-$\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:ctalbert@mozilla.com}{ctalbert@mozilla.com}}
+to analyze and improve test coverage for an python library suite called Mozbase. \\ Reference: Clint \textsc{Talbert}\
+$\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@noreply.com}{\textsc{request email}}}
 
 %------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
 
-\pagebreak
 
 %----------------------------------------------------------------------------------------
 %	VOLUNTEER EXPERIENCE
@@ -131,51 +157,25 @@ $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:ctalbert@mozilla
 
 \noindent\spacedlowsmallcaps{Volunteer Experience}\vspace{1em}
 
-\NewEntry{Jun--Nov '14}{Community Building, \textsc{Release Engineering}}
+\NewEntry{\mbox{Jun'14--Nov'14}}{Community Building, \textsc{Release Engineering}}
 
 \Description{\MarginText{Mozilla}Recognized for bringing in and mentoring new contributors. Helped make the team's work more approachable for new volunteers.}
 
 %------------------------------------------------
 
-\NewEntry{Dec '12-'13}{Volunteer Contributor, \textsc{Automation \& Tools}}
+\NewEntry{\mbox{Dec'12-Dec'13}}{Volunteer Contributor, \textsc{Automation \& Tools}}
 
 \Description{\MarginText{Mozilla}Helped fix numerous bugs across different test suites and testing frameworks.} 
 
 %------------------------------------------------
 
-\NewEntry{May '13--Cont.}{Head, \textsc{Open Source Development Group}}
+\NewEntry{\mbox{May'13--May'15}}{Head, \textsc{Open Source Development Group}}
 
 \Description{\MarginText{Open Source Development Group, IIIT-H}Built awareness about F/OSS
 software, encouraged contributions to the community. Organized talks and hackathons to
 encourage community growth and learning. Greater awareness and encouragement helped increase the
 Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC} '14).
 \\ Regular writer for the Group's Technical Blog.}
-
-%------------------------------------------------
-
-\vspace{1em} % Extra space between major sections
-
-
-%----------------------------------------------------------------------------------------
-%	ACADEMIC PROJECTS
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Academic Projects}\vspace{1em}
-
-\NewEntry{Monsoon '13}{Attendance System} 
-
-\Description{\MarginText{Statistical Methods in AI}Developed a prototype of a photograph based
-    attendance system. \linebreak
-    The prototype showed over 75\% recognition accuracy and involved Facial Recognition utilizing
-    PCA, Eigen Vectors, SVM and research from ` Turk \& Pentland: Eigenfaces for Recognition 1991,
-MIT Vision and Modelling group. '}
-%------------------------------------------------
-
-\NewEntry{Spring '14}{Search Engine}
-
-\Description{\MarginText{Information Retrieval and Extraction}Designed and implemented a prototype search engine in python which utilizes Natural Language processing libraries for keyword extraction and performs indexing based on a Posting list and inverted Indices. Tests on the Wikipedia corpus showed good Relevance with both Human subjects and DCG based methods.}
-
-%------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
 
@@ -188,13 +188,13 @@ MIT Vision and Modelling group. '}
 \Description{\MarginText{Proficient}\textsc{Python}, \textsc{Bash}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{\MarginText{Basic}\textsc{C}, \textsc{C++}, \textsc{Javascript}}
+\Description{\MarginText{Basic}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
 \Description{\MarginText{Version Control}\textsc{Git}, \textsc{Mercurial}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{\MarginText{Misc}\textsc{Docker}, \textsc{Ansible}, \textsc{Kubernetes}, \textsc{Linking and Loading in Linux}}
+\Description{\MarginText{Misc}\textsc{Docker}, \textsc{Kubernetes}, \textsc{Ansible}, \textsc{Linking and Loading in Linux}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
 \Description{\MarginText{Compute Clouds}\textsc{Google Compute Engine}, \textsc{AWS}, \textsc{Digital Ocean}}
@@ -212,7 +212,8 @@ MIT Vision and Modelling group. '}
 
 \spacedlowsmallcaps{Education}\vspace{0.5em}
 
-\Description{\MarginText{Bachelor's in CS (Hons. CV \& AI)}2011--2015\ \ $\cdotp$\ \ International Institute of Information and Technology, Hyderabad}
+\Description{\MarginText{Bachelor's in CS (Hons. CV \& AI)}2011--15\ \ $\cdotp$\ \ International
+Institute of Information and Technology, Hyderabad}
 
 %----------------------------------------------------------------------------------------
 

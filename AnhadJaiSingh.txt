@@ -1,0 +1,68 @@
+Anhad Jai Singh 
+===============
+
+Personal Information
+--------------------
+
+Mobile: +91 9989493267
+Email: anhad.jai.singh+resume.txt@gmail.com
+Webpage: https://ffledgling.com  
+Blog:  https://blog.ffledgling.com
+IRC: ffledgling (irc.mozilla.org, irc.freenode.net)
+
+
+About Me
+--------
+
+I’m a curious guy, I ask questions and I like to learn.
+I try to stay on the cutting edge of tools, technology and culture.
+Interested in all things to do with Networking, Containers, Linux, Distributed
+Systems and Open Source.
+
+Experience
+----------
+
+- Tech Lead, Cloud Services, Tower Research Capital (May '17 - Present)
+- Developer Operations, Core Engineering, Tower Research Capital (Aug '15 - May '17)
+- Release Engineering Intern, Mozilla. (Summer of '15)
+- Junior Student Sysadmin, IIIT-Hyderabad. (Feb '14 - May '15)
+- Release Engineering Intern, Mozilla. (Summer of '14)
+- Google Summer of Code, Automation and Tools Team, Mozilla. (Summer of '13)
+
+
+Other Stuff
+-----------
+
+- Head of the Open Source Development Group, IIIT Hyderabad. ('12 - '15)
+- Tech-Lead Felicity '14, Annual Technical Festival IIIT-Hyderabad.
+- Mentoring new contributors for Mozilla’s Release Engineering. ('14)
+- Teaching Assistant IT Workshop. (Monsoon Semester '13)
+
+
+Skill Set
+---------
+
+- Proficient Languages: Python, Bash.
+- Basic: C, C++, Go, Javascript.
+- Version Control: Git, Mercurial
+- Misc: Docker, Kubernetes, Ansible, Linking and Loading in Linux
+- Compute Clouds: Google Compute Engine, AWS, Digital Ocean
+- Operating Systems: Linux (preferred), OSX, Windows.
+
+Always, *always*, willing to pickup whatever else is needed.
+
+
+Education
+---------
+
+  2011-2015
+  B.Tech Computer Science with Honors in Computer Vision and Artificial Intelligence.
+  International Institute of Information and Technology, Hyderabad.
+  GPA: 8.15/10.
+
+
+Online Aliases
+--------------
+
++ Github: ffledgling <https://github.com/ffledgling>
++ Twitter ffledgling <https://twitter.com/ffledgling>
