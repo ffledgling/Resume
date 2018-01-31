@@ -1,0 +1,315 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011 } % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\date{} % Remove the date we get at the end of the CV
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Anhad Jai Singh}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{email}{\href{mailto:anhad.jai.singh+resume@gmail.com}{anhad.jai.singh@gmail.com}} % Email address
+
+\NewEntry{website}{\href{https://ffledgling.com}{https://ffledlging.com}} % Personal website
+
+\NewEntry{blog}{\href{https://blog.ffledgling.com}{https://blog.ffledlging.com}} % Blog
+
+\NewEntry{phone}{(M) +91 9989493267} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{About Me}\vspace{1em} % Goal heading, could be used for a quotation or short profile 
+
+\Description{I'm a curious guy, I ask a lot of questions and love to learn. \linebreak
+Interested in all things Networking, Linux, Containers, Distributed Systems and Open Source.}
+\vspace{1em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	UNDERGRADUATE RESEARCH
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Undergraduate Research}\vspace{1em}
+
+\NewEntry{\mbox{May'13--May'15}}{Honors, \textsc{CVIT}}
+
+\Description{\MarginText{Prof. Anoop M. Namboodiri} Worked to devise classifiers for use in computationally
+    restrictive environments such as smartphones. The idea was to make them faster and more
+    compact than state-of-the-art classifiers, sacrificing accuracy where necessary. \linebreak
+    \begin{itemize}
+        \item Proposed a new tree based classifier that was a hybrid of one-vs-one and one-vs-rest classifiers and evaluated and later attempted to optimize its performance along different axes such as speed, memory utilization and accuracy.
+        \item In the process of evaluation we came up with a way to visualize the progress and final results of the classifier using d3.js and a small python backend server that would serve the most up-to-date progress status of the classification process.
+        \item The full, detailed project report for this project is available at: \href{https://web.iiit.ac.in/~anhadjai.singh/Notes/library}{https://web.iiit.ac.in/~anhadjai.singh/Notes/library}
+        \item The visualization for a (static) classifier is available at: \href{https://web.iiit.ac.in/~anhadjai.singh/honors/vis/}{https://web.iiit.ac.in/~anhadjai.singh/honors/vis/}
+    \end{itemize}
+}
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{\mbox{May'17--Cont.}}{Tech Lead, Cloud Services  --- Gurgaon}
+
+\Description{\MarginText{Tower Research}Working as part of team building on-prem cloud
+    infrastructure.
+    \linebreak
+    \begin{itemize}
+        \item Researched, designed, planned, demoed and currently rolling out custom network
+            ingress, loadbalancing and DNS solutions for on-perm Kubernetes clusters while working
+            with a cross-functional team of experts across timezones.
+        \item Evaluated and expanded the capabilities of \href{https://github.com/PowerDNS/pdns}{pdns} and \href{https://github.com/kubernetes-incubator/external-dns/}{external-dns} as part of these efforts, upstreaming changes to benefit the wider community.
+    \end{itemize}
+    Reference: Neil \textsc{Tiwari}\ \ $\cdotp$\ Team Manager \ $\cdotp$\
+    \href{mailto:ntiwari@noreply.com}{\textsc{Request Email}}}
+ 
+
+% This is a manual page break we toss in because we want logical "sections" to not span across page
+% boundaries
+\pagebreak
+%------------------------------------------------
+
+\NewEntry{\mbox{Aug'15--May'17}}{DevOps, Core Engineering  --- Gurgaon}
+
+\Description{\MarginText{Tower Research}Worked as part of an innately
+cross-functional team to improve developer workflow and productivity by writing tooling to automate
+and streamline processes.
+\begin{itemize}
+    \item Designed, proposed and rolled out a revamped, containerized build infrastructure for
+        CI/CD using Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
+        developers in the process.
+    \item Worked as part of a team to build, test and roll out the server-side component of a
+        meta-SCM system that keeps track of cross-project source dependencies, now widely deployed.
+    \item Designed and delivered a simple server-client system used for update notification
+        management of command line tools.
+\end{itemize}
+    Reference: Rahul \textsc{Balani}\ \ $\cdotp$\ Division Manager \ $\cdotp$\
+    \href{mailto:rbalani@noreply.com}{\textsc{Request Email}}}
+
+%------------------------------------------------
+
+\NewEntry{\mbox{May'15--Jul'15}}{Release Engineering Intern  --- San Francisco}
+
+\Description{\MarginText{Mozilla}Worked with multiple teams within Mozilla to plan and
+execute migrations of legacy services and build configurations and release pipelines to a new
+platform based on AWS providing a more robust and reliable setup. Most work involved Ansible,
+Docker, AWS and Python. Second project involved working with and migrating workloads to an
+internal workload orchestration platform called Taskcluster, built using Docker and
+Golang. \\ Reference: Hal \textsc{Wine}\ \
+$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
+
+%------------------------------------------------
+
+
+\NewEntry{\mbox{Feb'14--Aug'15}}{Junior System Administrator --- Hyderabad}
+
+\Description{\MarginText{IIIT Hyderabad}Worked as Junior System Administrator, managing and
+maintaining the Institute's Servers used by over 2000 users.}
+
+%------------------------------------------------
+
+\NewEntry{\mbox{May'14--Aug'14}}{Release Engineering Intern  --- San Francisco}
+
+\Description{\MarginText{Mozilla}Worked with Mozilla's globally distributed team of Release
+Engineers to develop a new on-demand partial software update generation system for Firefox called Funsize.\\ Reference: Hal \textsc{Wine}\ \
+$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
+
+%------------------------------------------------
+
+\NewEntry{\mbox{Jun'13-Aug'13}}{Automation \& Tools Intern, Mozilla --- Remote}
+
+\Description{\MarginText{Google Summer of Code}Worked with Mozilla's Automation and Tools Team remotely
+to analyze and improve test coverage for an python library suite called Mozbase. \\ Reference: Clint \textsc{Talbert}\
+$\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@noreply.com}{\textsc{request email}}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	TEACHING EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Teaching Experience}\vspace{1em}
+
+\NewEntry{\mbox{May'13--May'15}}{Teaching Assistant, \textsc{IT Workshop-I}}
+
+\Description{\MarginText{IIIT-H}Taught the fundamentals of Linux, Shell Scripting and Javascript to
+a class of freshmen. Responsibilities included:
+    \begin{itemize}
+        \item Preparing content for and conducting labs for freshmen.
+        \item Creation and evalution of course assignments.
+        \item Mid-Term and Final exam evalution.
+    \end{itemize}
+}
+
+\NewEntry{\mbox{Jul'17--Aug'17}}{Course Instructor, DevTools}
+
+\Description{\MarginText{Tower University}Instructor for an introductory course on version control, build
+systems, package managers, details of compilation and linking to campus graduate hires. Responsibilities included:
+    \begin{itemize}
+        \item Teaching and prepation of course content.
+        \item Creation and evalution of course assignments.
+    \end{itemize}
+}
+
+%------------------------------------------------
+
+% This is a manual page break we toss in because we want logical "sections" to not span across page
+% boundaries
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Volunteer Experience}\vspace{1em}
+
+\NewEntry{\mbox{May'13--May'15}}{Head, \textsc{Open Source Development Group}}
+
+\Description{\MarginText{Open Source Development Group, IIIT-H}Built awareness about F/OSS
+software, encouraged contributions to the community. Organized talks and hackathons to
+encourage community growth and learning. Greater awareness and encouragement helped increase the
+Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC} '14).
+\\ Regular writer for the Group's Technical Blog.}
+
+%------------------------------------------------
+\NewEntry{\mbox{Jun'14--Nov'14}}{Community Building, \textsc{Release Engineering}}
+
+\Description{\MarginText{Mozilla}Recognized for bringing in and mentoring new contributors. Helped make the team's work more approachable for new volunteers.}
+
+%------------------------------------------------
+
+\NewEntry{\mbox{Dec'12-Dec'13}}{Volunteer Contributor, \textsc{Automation \& Tools}}
+
+\Description{\MarginText{Mozilla}Helped fix numerous bugs across different test suites and testing frameworks.} 
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+\Description{\MarginText{Bachelor's in CS (Hons. CV \& AI)}2011--15\ \ $\cdotp$\ \ International
+Institute of Information and Technology, Hyderabad}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	ELECTIVES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Advanced Electives}\vspace{1em}
+
+\Description{\MarginText{Vision \& AI}\textsc{Statistical Methods in AI}, \textsc{Digital Image
+Processing}, \textsc{Computer Vision}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Systems}\textsc{Advanced Computer Networks}, \textsc{Database Systems},
+\textsc{Distributed Systems}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Others}\textsc{Compilers}, \textsc{Principles of Programming Languages}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Capable}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%----------------------------------------------------------------------------------------
+%	SKILLSET
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Skill Set}\vspace{1em}
+
+\Description{\MarginText{Proficient}\textsc{Python}, \textsc{Bash}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Capable}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Container Tech}\textsc{Docker}, \textsc{Kubernetes}, \textsc{rkt}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Ops Miscellany}\textsc{Ansible}, \textsc{helm}, \textsc{Jenkins}, \textsc{Linking and Loading in Linux}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Compute Clouds}\textsc{Google Compute Engine}, \textsc{AWS}, \textsc{Digital Ocean}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Operating Systems}Linux(Preferred), OSX, Windows}
+
+\Description{\MarginText{Version Control}\textsc{Git}, \textsc{Mercurial}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	ONLINE HANDLES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Online Aliases}\vspace{0.5em}
+
+\Description{\MarginText{}Github\ \ $\cdotp$\ \ \href{https://github.com/ffledgling}{ffledgling}\linebreak
+Twitter\ \ $\cdotp$\ \ \href{https://twitter.com/ffledgling}{ffledgling}}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
