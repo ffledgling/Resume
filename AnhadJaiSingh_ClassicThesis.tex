@@ -26,6 +26,7 @@
 
 \usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
 \usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage{fontawesome} % For fancy company logos, Github, LinkedIn, etc.
 
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
 
@@ -67,8 +68,7 @@
 \noindent\spacedlowsmallcaps{About Me}\vspace{1em} % Goal heading, could be used for a quotation or short profile 
 
 \Description{I'm a curious guy, I ask questions and I like to learn. \linebreak
-I try to stay on the cutting edge of tools, technology and culture. \linebreak
-Interested in all things Networking, Linux, Containers, Distributed Systems and Open Source.}
+    Interested in all things Networking, Linux, Containers, Distributed Systems and Open Source.}
 \vspace{1em} % Goal text
 
 %----------------------------------------------------------------------------------------
@@ -79,12 +79,26 @@ Interested in all things Networking, Linux, Containers, Distributed Systems and 
 
 \NewEntry{\mbox{May'17--Apr'18}}{Tech Lead, Cloud Services  --- Gurgaon}
 
-\Description{\MarginText{Tower Research}Working as part of team building on-prem cloud
-    infrastructure.
+\Description{\MarginText{Tower Research}Worked as part of a division building out and driving adoption
+    of on-premise cloud infrastructure. Responsibilities included individual contributions,
+    technical advisory for product teams regarding cloud migrations and container technology.
+    Also responsible for structured training of new recruits and mentoring junior engineers within
+    the team.
     \begin{itemize}
-        \item On-boarding clients, applications onto Kubernetes.
-        \item Researched, designed, demoed and rolled out a custom network ingress, loadbalancing and DNS solutions for on-perm Kubernetes clusters.
-        \item Contributed to FOSS projects such as \href{https://github.com/PowerDNS/pdns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{pdns} and \href{https://github.com/kubernetes-incubator/external-dns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{external-dns} as part of these efforts.
+        \item Designed, wrote and deployed various networking components to expose Kubernetes
+            services outside the cluster, bringing the on-prem clusters close to parity with cloud
+            providers. Work included rolling out custom network ingress, load-balancing and DNS
+            solutions. This reduced time to provision a service from a few days to a few seconds,
+            removed any single points of failure in the networking stack and added self-recovery
+            capabilities. The project required understanding of container networking, iptables, DNS
+            and working with golang. As part of these efforts, I also contributed to OSS projects
+            such as
+            \href{https://github.com/PowerDNS/pdns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{pdns}
+            and
+            \href{https://github.com/kubernetes-incubator/external-dns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{external-dns}
+        \item Helped product teams on-board various applications such as simulations, back-testing, backend
+            API servers etc. onto Kubernetes/Cloud Infrastructure, acting as the primary point of
+            communication and escalation.
     \end{itemize}
     Reference \#1: Neil \textsc{Tiwari}\ \ $\cdotp$\ Team Manager \ $\cdotp$\
     \href{mailto:ntiwari@noreply.com}{\textsc{Request Email}} \\
@@ -97,29 +111,39 @@ Interested in all things Networking, Linux, Containers, Distributed Systems and 
 \NewEntry{\mbox{Aug'15--May'17}}{DevOps, Core Engineering  --- Gurgaon}
 
 \Description{\MarginText{Tower Research}Worked as part of an innately
-cross-functional team to improve developer workflow and productivity by writing tooling to automate
-and streamline processes.
+cross-functional team with various responsibilities ranging from build \& release engineering,
+writing developer productivity tools, to on-call support and server administration.
 \begin{itemize}
-    \item Worked as part of a team to build, test and roll out the server-side component of a
-        meta-SCM system that keeps track of cross-project source dependencies, now widely deployed.
-    \item Designed and delivered a simple server-client system used for update notification
-        management of command line tools.
-    \item Designed, proposed and rolled out a revamped, containerized build infrastructure for
-        CI/CD using Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
-        developers in the process.
+    \item Designed and rolled out revamped, containerized build infrastructure for CI/CD using
+        Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
+        developers in the process. Evaluation involved setting up A/B testing and metrics collection
+        for the project, which showed a 35\% improvement in speed and a drastic reduction in
+        intermittent failures.
+    \item Wrote various components in Python for an in-house git based meta-SCM system for
+        cross-repo dependencies, including the API server, test harness, and update notification
+        system.
+    \item Helped migrate the development stack from Fedora20 to Fedora22, including recompiling over
+        a hundred in-house and open-source packages and trouble-shooting linking, loading and
+        runtime errors in applications.
+    \item Responsible for the administration and support of our Gitolite, Gerrit, Jenkins, Jira
+        and Apache servers as well as in-house developer productivity tooling.
 \end{itemize}
     Reference: Rahul \textsc{Balani}\ \ $\cdotp$\ Division Manager \ $\cdotp$\
     \href{mailto:rbalani@noreply.com}{\textsc{Request Email}}}
 
+\pagebreak
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
 %------------------------------------------------
 
 \NewEntry{\mbox{May'15--Jul'15}}{Release Engineering Intern  --- San Francisco}
 
-\Description{\MarginText{Mozilla}Worked with multiple teams within Mozilla to plan and
-execute migrations of existing services and build configurations to newer systems/platforms with
-more robust setups. Most work involved Ansible, Docker, AWS and an
-internal platform called Taskcluster.\\ Reference: Hal \textsc{Wine}\ \
-$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
+\Description{\MarginText{Mozilla}Worked with multiple teams within Mozilla to plan and execute
+migrations of existing services and CI builds to newer, more robust in-house cloud based platforms.
+Most work involved Ansible, Docker, AWS and an internal platform called Taskcluster.
+\linebreak
+Also helped make the team's work more approachable for newcomers and earned recognition for bringing in and mentoring new contributors. \\ Reference:
+Hal \textsc{Wine}\ \ $\cdotp$\ Sr. Release Engineer \ $\cdotp$\
+\href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
 
 %------------------------------------------------
 
@@ -127,26 +151,30 @@ $\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\text
 \NewEntry{\mbox{Feb'14--Aug'15}}{Junior System Administrator --- Hyderabad}
 
 \Description{\MarginText{IIIT Hyderabad}Worked as Junior System Administrator, managing and
-maintaining the Institute's Servers used by over 2000 users.}
+maintaining the Institute's desktops and servers used by over 2000 users.}
 
 % This is a manual page break we toss in because we want logical "sections" to not span across page
 % boundaries
-\pagebreak
+% \pagebreak
 %------------------------------------------------
 
 \NewEntry{\mbox{May'14--Aug'14}}{Release Engineering Intern  --- San Francisco}
 
 \Description{\MarginText{Mozilla}Worked with Mozilla's globally distributed team of Release
-Engineers to develop a new on-demand partial software update generation system for Firefox called Funsize.\\ Reference: Hal \textsc{Wine}\ \
-$\cdotp$\ Sr. Release Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
+Engineers across timezones, to develop a new on-demand software update generation system for Firefox
+called Funsize to thereby reduce the time and effort needed to support custom upgrade pathways.
+Written in Python and hosted on AWS.\\ Reference: Hal \textsc{Wine}\ \ $\cdotp$\ Sr. Release
+Engineer \ $\cdotp$\ \href{mailto:hwine@noreply.com}{\textsc{Request Email}}}
 
 %------------------------------------------------
 
 \NewEntry{\mbox{Jun'13-Aug'13}}{Automation \& Tools Intern, Mozilla --- Remote}
 
-\Description{\MarginText{Google Summer of Code}Worked with Mozilla's Automation and Tools Team remotely
-to analyze and improve test coverage for an python library suite called Mozbase. \\ Reference: Clint \textsc{Talbert}\
-$\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@noreply.com}{\textsc{request email}}}
+\Description{\MarginText{Google Summer of Code}Worked with Mozilla's Automation and Tools Team
+remotely to analyse and improve test coverage for 10+ python libraries (called Mozbase) by over
+150\%, while coordinating with each component owner to ensure correct and necessary coverage.\\
+Reference: Clint \textsc{Talbert}\ $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \
+\href{mailto:cmtalbert@noreply.com}{\textsc{request email}}}
 
 %------------------------------------------------
 
@@ -159,18 +187,6 @@ $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@norepl
 
 \noindent\spacedlowsmallcaps{Volunteer Experience}\vspace{1em}
 
-\NewEntry{\mbox{Jun'14--Nov'14}}{Community Building, \textsc{Release Engineering}}
-
-\Description{\MarginText{Mozilla}Recognized for bringing in and mentoring new contributors. Helped make the team's work more approachable for new volunteers.}
-
-%------------------------------------------------
-
-\NewEntry{\mbox{Dec'12-Dec'13}}{Volunteer Contributor, \textsc{Automation \& Tools}}
-
-\Description{\MarginText{Mozilla}Helped fix numerous bugs across different test suites and testing frameworks.} 
-
-%------------------------------------------------
-
 \NewEntry{\mbox{May'13--May'15}}{Head, \textsc{Open Source Development Group}}
 
 \Description{\MarginText{Open Source Development Group, IIIT-H}Built awareness about F/OSS
@@ -178,6 +194,13 @@ software, encouraged contributions to the community. Organized talks and hackath
 encourage community growth and learning. Greater awareness and encouragement helped increase the
 Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC} '14).
 \\ Regular writer for the Group's Technical Blog.}
+
+%------------------------------------------------
+
+% Removed because not very useful
+%%% \NewEntry{\mbox{Dec'12-Dec'13}}{Volunteer Contributor, \textsc{Automation \& Tools}}
+%%% 
+%%% \Description{\MarginText{Mozilla}Helped fix numerous bugs across different test suites and testing frameworks.} 
 
 \vspace{1em} % Extra space between major sections
 
@@ -190,19 +213,17 @@ Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC
 \Description{\MarginText{Proficient}\textsc{Python}, \textsc{Bash}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{\MarginText{Basic}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
+\Description{\MarginText{Rudimentary}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{\MarginText{Version Control}\textsc{Git}, \textsc{Mercurial}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Misc}\textsc{Docker}, \textsc{Kubernetes}, \textsc{Ansible}, \textsc{Linking and Loading in Linux}}
+\Description{\MarginText{Misc}\textsc{Docker}, \textsc{Kubernetes}, \textsc{Qemu/KVM}, \textsc{Ansible},
+\textsc{Jenkins}, \textsc{influxdb}, \textsc{Apache}, \textsc{Git} }
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
 \Description{\MarginText{Compute Clouds}\textsc{Google Compute Engine}, \textsc{AWS}, \textsc{Digital Ocean}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{\MarginText{Operating Systems}Linux(Preferred), OSX, Windows}
+\Description{\MarginText{Operating Systems}RHEL Family, Ubuntu, CoreOS}
 
 %------------------------------------------------
 
@@ -223,10 +244,13 @@ Institute of Information and Technology, Hyderabad}
 %	ONLINE HANDLES
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Online Aliases}\vspace{0.5em}
+\spacedlowsmallcaps{Online Presence}\vspace{0.5em}
 
-\Description{\MarginText{}Github\ \ $\cdotp$\ \ \href{https://github.com/ffledgling}{ffledgling}\linebreak
-Twitter\ \ $\cdotp$\ \ \href{https://twitter.com/ffledgling}{ffledgling}}
+\Description{\MarginText{``ffledgling''}
+\href{https://github.com/ffledgling}{\faGithub} \ \ $\cdotp$\ \
+\href{https://twitter.com/ffledgling}{\faTwitter} \ \ $\cdotp$\ \
+\href{https://stackoverflow.com/users/1220089/ffledgling}{\faStackOverflow}
+}
 
 %----------------------------------------------------------------------------------------
 
