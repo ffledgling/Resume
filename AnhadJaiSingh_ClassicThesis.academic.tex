@@ -54,21 +54,144 @@
 
 \noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
 
-\NewEntry{email}{\href{mailto:anhad.jai.singh+resume@gmail.com}{anhad.jai.singh@gmail.com}} % Email address
+\href{mailto:anhad.jai.singh+resume@gmail.com}{\texttt{anhad.jai.singh@gmail.com}}
+$\cdotp$
+\href{https://ffledgling.com}{\texttt{ffledgling.com}}
+$\cdotp$
+\href{tel:+919989493267}{\texttt{+91-9989493267}}
 
-\NewEntry{website}{\href{https://ffledgling.com}{https://ffledlging.com}} % Personal website
+% Email address
+% \NewEntry{website}{\href{https://ffledgling.com}{https://ffledlging.com}} % Personal website
+% \Description{\MarginText{}Github\ \ $\cdotp$\ \ \href{https://github.com/ffledgling}{ffledgling}\linebreak
+%%% Twitter\ \ $\cdotp$\ \ \href{https://twitter.com/ffledgling}{ffledgling}}
 
-\NewEntry{blog}{\href{https://blog.ffledgling.com}{https://blog.ffledlging.com}} % Blog
-
-\NewEntry{phone}{(M) +91 9989493267} % Phone number(s)
+% \NewEntry{blog}{\href{https://blog.ffledgling.com}{https://blog.ffledlging.com}} % Blog
+% 
+% \NewEntry{phone}{(M) +91 9989493267} % Phone number(s)
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
 \noindent\spacedlowsmallcaps{About Me}\vspace{1em} % Goal heading, could be used for a quotation or short profile 
 
-\Description{I'm a curious guy, I ask a lot of questions and love to learn. \linebreak
-Interested in all things Networking, Linux, Containers, Distributed Systems and Open Source.}
+\Description{I'm a very curious person. I'm extremely interested in and currently looking to grow my understanding of Distributed Systems, High Performance Networking and Operating System Design and Mathematics}
 \vspace{1em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+\Description{\MarginText{Bachelor's in CS (Hons. CV \& AI)}2011--15\ \ $\cdotp$\ \ International
+Institute of Information and Technology, Hyderabad}
+
+\vspace{1em} % Extra space between major sections
+
+
+
+%----------------------------------------------------------------------------------------
+%	ELECTIVES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Advanced Electives}\vspace{1em}
+
+\Description{\MarginText{Systems}\textsc{Advanced Computer Networks}, \textsc{Database Systems},
+\textsc{Distributed Systems}, \textsc{Compilers}, \textsc{Principles of Programming Languages}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\MarginText{Vision \& AI}\textsc{Statistical Methods in AI}, \textsc{Digital Image
+Processing}, \textsc{Computer Vision}}
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%----------------------------------------------------------------------------------------
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Awards and Achievements}\vspace{0.5em}
+
+\Description{\MarginText{Dean's Merit List}\textsc{2012}\ \ $\cdotp$\ Awarded to top performing students in a semester}
+\Description{\MarginText{Letter of Recognition}\textsc{2015}\ \ $\cdotp$\ \ Awarded for outstanding
+contributions to the student community as a student System Administrator.}
+
+%----------------------------------------------------------------------------------------
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+%----------------------------------------------------------------------------------------
+
+\NewEntry{\mbox{Oct'18--Cont.}}{Systems Software Developer}
+
+\Description{\MarginText{CrowdAI,\\EPFL}CrowdAI is a crowd-sourcing platform for open data science challenges developed at the Digital Epidemiology Lab in École Polytechnique Fédérale de Lausanne (EPFL), that allows experts in AI to solve hard real-world problems. I'm currently working as part of the CrowdAI team to improve, scale, and stabalize the crowdai platform and infrastructure. Prominent work so far includes contributions to the ``NIPS 2018: Adverserial Vision Challenge'' and helping rearchitect the platform to handle upto 16x the original GPU and submission load.
+}
+
+%----------------------------------------------------------------------------------------
+
+\NewEntry{\mbox{May'17--Apr'18}}{Tech Lead, Cloud Services  --- Gurgaon}
+
+\Description{\MarginText{Tower Research}Worked as part of a division building out and driving adoption
+    of on-premise cloud infrastructure. Responsibilities included individual contributions,
+    technical advisory for product teams regarding cloud migrations and container technology.
+    Also responsible for structured training of new recruits and mentoring junior engineers within
+    the team.
+    \begin{itemize}
+        \item Designed, wrote and deployed various networking components to expose Kubernetes
+            services outside the cluster, bringing the on-prem clusters close to parity with cloud
+            providers. Work included rolling out custom network ingress, load-balancing and DNS
+            solutions. This reduced time to provision a service from a few days to a few seconds,
+            removed any single points of failure in the networking stack and added self-recovery
+            capabilities. The project required understanding of container networking, iptables, DNS
+            and working with golang. As part of these efforts, I also contributed to OSS projects
+            such as
+            \href{https://github.com/PowerDNS/pdns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{pdns}
+            and
+            \href{https://github.com/kubernetes-incubator/external-dns/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr\%20author\%3Affledgling\%20}{external-dns}
+        \item Helped product teams on-board various applications such as simulations, back-testing, backend
+            API servers etc. onto Kubernetes/Cloud Infrastructure, acting as the primary point of
+            communication and escalation.
+    \end{itemize}
+    Reference: Neil \textsc{Tiwari}\ \ $\cdotp$\ Global Division Manager\ $\cdotp$\
+    \href{mailto:ntiwari@noreply.com}{\textsc{Request Email}}
+}
+ 
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\NewEntry{\mbox{Aug'15--May'17}}{DevOps, Core Engineering  --- Gurgaon}
+
+\Description{\MarginText{Tower Research}Worked as part of an innately
+cross-functional team with various responsibilities ranging from build \& release engineering,
+writing developer productivity tools, to on-call support and server administration.
+\begin{itemize}
+    \item Designed and rolled out revamped, containerized build infrastructure for CI/CD using
+        Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
+        developers in the process. Evaluation involved setting up A/B testing and metrics collection
+        for the project, which showed a 35\% improvement in speed and a drastic reduction in
+        intermittent failures.
+    \item Wrote various components in Python for an in-house git based meta-SCM system for
+        cross-repo dependencies, including the API server, test harness, and update notification
+        system.
+    \item Helped migrate the development stack from Fedora20 to Fedora22, including recompiling over
+        a hundred in-house and open-source packages and trouble-shooting linking, loading and
+        runtime errors in applications.
+    \item Responsible for the administration and support of our Gitolite, Gerrit, Jenkins, Jira
+        and Apache servers as well as in-house developer productivity tooling.
+\end{itemize}
+    Reference: Rahul \textsc{Balani}\ \ $\cdotp$\ Division Manager \ $\cdotp$\
+    \href{mailto:rbalani@noreply.com}{\textsc{Request Email}}}
+
+\vspace{1em} % Extra space between major sections
+%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	UNDERGRADUATE RESEARCH
@@ -76,11 +199,11 @@ Interested in all things Networking, Linux, Containers, Distributed Systems and 
 
 \noindent\spacedlowsmallcaps{Undergraduate Research}\vspace{1em}
 
-\NewEntry{\mbox{May'13--May'15}}{Honors, \textsc{CVIT}}
+\NewEntry{\mbox{May'13--May'15}}{Honors, \textsc{Center for Visual IT (CVIT)}}
 
 \Description{\MarginText{Prof. Anoop M. Namboodiri} Worked to devise classifiers for use in computationally
     restrictive environments such as smartphones. The idea was to make them faster and more
-    compact than state-of-the-art classifiers, sacrificing accuracy where necessary. \linebreak
+    compact than state-of-the-art classifiers, sacrificing accuracy where necessary.
     \begin{itemize}
         \item Proposed a new tree based classifier that was a hybrid of one-vs-one and one-vs-rest classifiers and evaluated and later attempted to optimize its performance along different axes such as speed, memory utilization and accuracy.
         \item In the process of evaluation we came up with a way to visualize the progress and final results of the classifier using d3.js and a small python backend server that would serve the most up-to-date progress status of the classification process.
@@ -91,50 +214,12 @@ Interested in all things Networking, Linux, Containers, Distributed Systems and 
 
 \vspace{1em} % Extra space between major sections
 
+
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE
+%	INTERN EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
-
-\NewEntry{\mbox{May'17--Cont.}}{Tech Lead, Cloud Services  --- Gurgaon}
-
-\Description{\MarginText{Tower Research}Working as part of team building on-prem cloud
-    infrastructure.
-    \linebreak
-    \begin{itemize}
-        \item Researched, designed, planned, demoed and currently rolling out custom network
-            ingress, loadbalancing and DNS solutions for on-perm Kubernetes clusters while working
-            with a cross-functional team of experts across timezones.
-        \item Evaluated and expanded the capabilities of \href{https://github.com/PowerDNS/pdns}{pdns} and \href{https://github.com/kubernetes-incubator/external-dns/}{external-dns} as part of these efforts, upstreaming changes to benefit the wider community.
-    \end{itemize}
-    Reference: Neil \textsc{Tiwari}\ \ $\cdotp$\ Team Manager \ $\cdotp$\
-    \href{mailto:ntiwari@noreply.com}{\textsc{Request Email}}}
- 
-
-% This is a manual page break we toss in because we want logical "sections" to not span across page
-% boundaries
-\pagebreak
-%------------------------------------------------
-
-\NewEntry{\mbox{Aug'15--May'17}}{DevOps, Core Engineering  --- Gurgaon}
-
-\Description{\MarginText{Tower Research}Worked as part of an innately
-cross-functional team to improve developer workflow and productivity by writing tooling to automate
-and streamline processes.
-\begin{itemize}
-    \item Designed, proposed and rolled out a revamped, containerized build infrastructure for
-        CI/CD using Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
-        developers in the process.
-    \item Worked as part of a team to build, test and roll out the server-side component of a
-        meta-SCM system that keeps track of cross-project source dependencies, now widely deployed.
-    \item Designed and delivered a simple server-client system used for update notification
-        management of command line tools.
-\end{itemize}
-    Reference: Rahul \textsc{Balani}\ \ $\cdotp$\ Division Manager \ $\cdotp$\
-    \href{mailto:rbalani@noreply.com}{\textsc{Request Email}}}
-
-%------------------------------------------------
+\noindent\spacedlowsmallcaps{Internships and Apprenticeships}\vspace{1em}
 
 \NewEntry{\mbox{May'15--Jul'15}}{Release Engineering Intern  --- San Francisco}
 
@@ -174,11 +259,36 @@ $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@norepl
 
 \vspace{1em} % Extra space between major sections
 
+
 %----------------------------------------------------------------------------------------
 %	TEACHING EXPERIENCE
 %----------------------------------------------------------------------------------------
 
 \noindent\spacedlowsmallcaps{Teaching Experience}\vspace{1em}
+
+\NewEntry{\mbox{Sept '18}}{Comprehensive Introduction to Python}
+
+\Description{\MarginText{Freelance Instructor}Taught a class of 38 recently graduated Software Engineers the fundamentals of Python, including but not limited to - OOP in Python, functional programming, object model, memory model, unit-testing, packaging and surrounding ecosystem tools. Responsible for everything from course content and assignment creation to teaching and grading.
+}
+
+\NewEntry{\mbox{Aug'18}}{Linux Fundamentals \& Bash Scripting}
+
+\Description{\MarginText{Freelance Instructor}Taught a class of 40 recently graduated Software Engineers fundamental concepts of Unix operating systems, Bash scripting, Kernel internals and systems programming. Responsible for everything from course content and assignment creation, teaching and grading.
+}
+
+%\pagebreak
+
+\NewEntry{\mbox{Jul'17--Aug'17}}{Course Instructor, Developer Tools}
+
+\Description{\MarginText{Tower University}Instructor for an introductory course on version control, build
+systems, package managers, details of compilation and linking to campus graduate hires. Responsible for everything from course content and assignment creation, teaching and grading.
+
+% Responsibilities included:
+%     \begin{itemize}
+%         \item Teaching and prepation of course content.
+%         \item Creation and evalution of course assignments.
+%     \end{itemize}
+}
 
 \NewEntry{\mbox{May'13--May'15}}{Teaching Assistant, \textsc{IT Workshop-I}}
 
@@ -191,21 +301,13 @@ a class of freshmen. Responsibilities included:
     \end{itemize}
 }
 
-\NewEntry{\mbox{Jul'17--Aug'17}}{Course Instructor, DevTools}
 
-\Description{\MarginText{Tower University}Instructor for an introductory course on version control, build
-systems, package managers, details of compilation and linking to campus graduate hires. Responsibilities included:
-    \begin{itemize}
-        \item Teaching and prepation of course content.
-        \item Creation and evalution of course assignments.
-    \end{itemize}
-}
+
 
 %------------------------------------------------
 
 % This is a manual page break we toss in because we want logical "sections" to not span across page
 % boundaries
-\pagebreak
 
 %----------------------------------------------------------------------------------------
 %	VOLUNTEER EXPERIENCE
@@ -238,93 +340,46 @@ Google Summer of Code selections from 16 (\textsc{GSoC} '12) to 69 (\textsc{GSoC
 
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Education}\vspace{0.5em}
-
-\Description{\MarginText{Bachelor's in CS (Hons. CV \& AI)}2011--15\ \ $\cdotp$\ \ International
-Institute of Information and Technology, Hyderabad}
-
-\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Awards and Achievements}\vspace{0.5em}
-
-\Description{\MarginText{Dean's Merit List}\textsc{2012}\ \ $\cdotp$\ Awarded to top performing students every
-semester}
-\Description{\MarginText{Letter of Recognition}\textsc{2015}\ \ $\cdotp$\ \ Awarded for outstanding
-contributions to the student community as a student System Administrator.}
-
-%----------------------------------------------------------------------------------------
-\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%	ELECTIVES
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Advanced Electives}\vspace{1em}
-
-\Description{\MarginText{Vision \& AI}\textsc{Statistical Methods in AI}, \textsc{Digital Image
-Processing}, \textsc{Computer Vision}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Systems}\textsc{Advanced Computer Networks}, \textsc{Database Systems},
-\textsc{Distributed Systems}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Others}\textsc{Compilers}, \textsc{Principles of Programming Languages}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Capable}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
 %	SKILLSET
+%
+% This secion doesn't need to exist in an academic resume
 %----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Skill Set}\vspace{1em}
-
-\Description{\MarginText{Proficient}\textsc{Python}, \textsc{Bash}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Capable}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Container Tech}\textsc{Docker}, \textsc{Kubernetes}, \textsc{rkt}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Ops Miscellany}\textsc{Ansible}, \textsc{helm}, \textsc{Jenkins}, \textsc{Linking and Loading in Linux}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Compute Clouds}\textsc{Google Compute Engine}, \textsc{AWS}, \textsc{Digital Ocean}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\MarginText{Operating Systems}Linux(Preferred), OSX, Windows}
-
-\Description{\MarginText{Version Control}\textsc{Git}, \textsc{Mercurial}}
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-
-%------------------------------------------------
-
-\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	ONLINE HANDLES
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Online Aliases}\vspace{0.5em}
-
-\Description{\MarginText{}Github\ \ $\cdotp$\ \ \href{https://github.com/ffledgling}{ffledgling}\linebreak
-Twitter\ \ $\cdotp$\ \ \href{https://twitter.com/ffledgling}{ffledgling}}
+%%% 
+%%% \spacedlowsmallcaps{Skill Set}\vspace{1em}
+%%% 
+%%% \Description{\MarginText{Proficient}\textsc{Python}, \textsc{Bash}}
+%%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%%% 
+%%% \Description{\MarginText{Capable}\textsc{C}, \textsc{C++}, \textsc{Go}, \textsc{Javascript}}
+%%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%%% 
+%%% \Description{\MarginText{Container Tech}\textsc{Docker}, \textsc{Kubernetes}, \textsc{rkt}}
+%%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%%% 
+%%% \Description{\MarginText{Ops Miscellany}\textsc{Ansible}, \textsc{helm}, \textsc{Jenkins}, \textsc{Linking and Loading in Linux}}
+%%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%%% 
+%%% \Description{\MarginText{Compute Clouds}\textsc{Google Compute Engine}, \textsc{AWS}, \textsc{Digital Ocean}}
+%%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%%% 
+%%% \Description{\MarginText{Operating Systems}Linux(Preferred), OSX, Windows}
+%%% 
+%%% \Description{\MarginText{Version Control}\textsc{Git}, \textsc{Mercurial}}
+%%% \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%%% 
+%%% 
+%%% %------------------------------------------------
+%%% 
+%%% \vspace{1em} % Extra space between major sections
+%%% 
+%%% %----------------------------------------------------------------------------------------
+%%% %	ONLINE HANDLES
+%%% %----------------------------------------------------------------------------------------
+%%% 
+%%% \spacedlowsmallcaps{Online Aliases}\vspace{0.5em}
+%%% 
+%%% \Description{\MarginText{}Github\ \ $\cdotp$\ \ \href{https://github.com/ffledgling}{ffledgling}\linebreak
+%%% Twitter\ \ $\cdotp$\ \ \href{https://twitter.com/ffledgling}{ffledgling}}
 
 %----------------------------------------------------------------------------------------
 
