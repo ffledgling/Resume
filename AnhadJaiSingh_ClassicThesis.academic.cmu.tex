@@ -18,7 +18,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{scrartcl}
+\documentclass[a4paper,10pt]{scrartcl}
 
 \reversemarginpar % Move the margin to the left of the page 
 
@@ -40,6 +40,10 @@
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 
 \date{} % Remove the date we get at the end of the CV
+
+% Used to cut down on page length, but makes the resume look uglier
+\usepackage[top=0.25in, bottom=0.25in, left=1.5in, right=1in]{geometry}
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -52,7 +56,7 @@
 
 \begin{cv}{\spacedallcaps{Anhad Jai Singh}}\vspace{1.5em} % Your name
 
-\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+\noindent\large\spacedlowsmallcaps{Personal Information}\normalsize\vspace{0.5em} % Personal information heading
 
 \href{mailto:anhad.jai.singh+resume@gmail.com}{\texttt{anhad.jai.singh@gmail.com}}
 $\cdotp$
@@ -71,16 +75,16 @@ $\cdotp$
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
-\noindent\spacedlowsmallcaps{About Me}\vspace{1em} % Goal heading, could be used for a quotation or short profile 
+\noindent\large\spacedlowsmallcaps{About Me}\normalsize\vspace{0.25em} % Goal heading, could be used for a quotation or short profile 
 
-\Description{I'm a very curious person. I'm extremely interested in and currently looking to grow my understanding of Distributed Systems, Cloud Computing, Software Defined Networking, Operating System Design and Mathematics.}
-\vspace{1em} % Goal text
+\Description{I'm extremely interested in and currently looking to grow my understanding of Distributed Systems, Cloud Computing, Software Defined Networking, Operating System Design and Mathematics.}
+\vspace{0.5em} % Goal text
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Education}\vspace{0.5em}
+\large\spacedlowsmallcaps{Education}\normalsize\vspace{0.5em}
 
 \Description{\MarginText{Bachelor's in CS (Hons. CV \& AI)}2011--15\ \ $\cdotp$\ \ International
 Institute of Information and Technology, Hyderabad}
@@ -93,14 +97,15 @@ Institute of Information and Technology, Hyderabad}
 %	ELECTIVES
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Advanced Electives}\vspace{1em}
+\large\spacedlowsmallcaps{Advanced Electives}\normalsize\vspace{0.5em}
 
-\Description{\MarginText{Systems}\textsc{Advanced Computer Networks}, \textsc{Database Systems},
-\textsc{Distributed Systems}, \textsc{Compilers}, \textsc{Principles of Programming Languages}}
+%%\Description{\MarginText{Systems}\textsc{Advanced Computer Networks}, \textsc{Database Systems},
+%%\textsc{Distributed Systems}, \textsc{Compilers}, \textsc{Principles of Programming Languages}}
+    \Description{\MarginText{Systems}\textit{Advanced Computer Networks $\cdotp$ Database Systems $\cdotp$ Distributed Systems $\cdotp$ Compilers $\cdotp$ Principles of Programming Languages}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{\MarginText{Vision \& AI}\textsc{Statistical Methods in AI}, \textsc{Digital Image
-Processing}, \textsc{Computer Vision}}
+\Description{\MarginText{Vision \& AI}\textit{Statistical Methods in AI $\cdotp$ Digital Image
+Processing $\cdotp$ Computer Vision}}
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
 %----------------------------------------------------------------------------------------
@@ -110,7 +115,7 @@ Processing}, \textsc{Computer Vision}}
 %	AWARDS
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Awards and Achievements}\vspace{0.5em}
+\large\spacedlowsmallcaps{Awards and Achievements}\normalsize\vspace{0.5em}
 
 \Description{\MarginText{Dean's Merit List}\textsc{2012}\ \ $\cdotp$\ Awarded to top performing students in a semester}
 \Description{\MarginText{Letter of Recognition}\textsc{2015}\ \ $\cdotp$\ \ Awarded for outstanding
@@ -124,7 +129,7 @@ contributions to the student community as a student System Administrator.}
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+\noindent\large\spacedlowsmallcaps{Work Experience}\normalsize\vspace{1em}
 
 %----------------------------------------------------------------------------------------
 
@@ -167,7 +172,7 @@ contributions to the student community as a student System Administrator.}
 
 %------------------------------------------------
 
-\NewEntry{\mbox{Aug'15--May'17}}{DevOps, Core Engineering  --- Gurgaon}
+\NewEntry{\mbox{Aug'15--May'17}}{Systems Engineer (Dev\&Ops), Core Engineering  --- Gurgaon}
 
 \Description{\MarginText{Tower Research}Worked as part of an innately
 cross-functional team with various responsibilities ranging from build \& release engineering,
@@ -193,11 +198,12 @@ writing developer productivity tools, to on-call support and server administrati
 \vspace{1em} % Extra space between major sections
 %------------------------------------------------
 
+\pagebreak
 %----------------------------------------------------------------------------------------
 %	UNDERGRADUATE RESEARCH
 %----------------------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Undergraduate Research}\vspace{1em}
+\noindent\large\spacedlowsmallcaps{Undergraduate Research}\normalsize\vspace{1em}
 
 \NewEntry{\mbox{May'13--May'15}}{Honors, \textsc{Center for Visual IT (CVIT)}}
 
@@ -207,9 +213,11 @@ writing developer productivity tools, to on-call support and server administrati
     \begin{itemize}
         \item Proposed a new tree based classifier that was a hybrid of one-vs-one and one-vs-rest classifiers and evaluated and later attempted to optimize its performance along different axes such as speed, memory utilization and accuracy.
         \item In the process of evaluation we came up with a way to visualize the progress and final results of the classifier using d3.js and a small python backend server that would serve the most up-to-date progress status of the classification process.
-        \item The full, detailed project report for this project is available at: \href{https://web.iiit.ac.in/~anhadjai.singh/Notes/library}{\texttt{\url{https://web.iiit.ac.in/~anhadjai.singh/Notes/library}}}
-        \item The visualization for a (static) classifier is available at: \href{https://web.iiit.ac.in/~anhadjai.singh/honors/vis/}{\texttt{\url{https://web.iiit.ac.in/~anhadjai.singh/honors/vis/}}}
     \end{itemize}
+
+    Project report: \href{https://web.iiit.ac.in/~anhadjai.singh/Notes/library}{\texttt{\url{web.iiit.ac.in/~anhadjai.singh/Notes/library}}}
+    \newline
+    Classifier Visualization: \href{https://web.iiit.ac.in/~anhadjai.singh/honors/vis/}{\texttt{\url{web.iiit.ac.in/~anhadjai.singh/honors/vis/}}}
 }
 
 \vspace{1em} % Extra space between major sections
@@ -219,7 +227,7 @@ writing developer productivity tools, to on-call support and server administrati
 %	INTERN EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Internships and Apprenticeships}\vspace{1em}
+\noindent\large\spacedlowsmallcaps{Internships and Apprenticeships}\normalsize\vspace{1em}
 
 \NewEntry{\mbox{May'15--Jul'15}}{Release Engineering Intern  --- San Francisco}
 
@@ -257,23 +265,18 @@ $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@norepl
 
 %------------------------------------------------
 
-\vspace{1em} % Extra space between major sections
+%\vspace{1em} % Extra space between major sections
 
 
 %----------------------------------------------------------------------------------------
 %	TEACHING EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Teaching Experience}\vspace{1em}
+\noindent\large\spacedlowsmallcaps{Teaching Experience}\normalsize\vspace{1em}
 
-\NewEntry{\mbox{Sept '18}}{Comprehensive Introduction to Python}
+\NewEntry{\mbox{Aug'18--Sept'18}}{Introduction to Python, Linux Fundamentals \& Bash Scripting}
 
-\Description{\MarginText{Freelance Instructor}Taught a class of 38 recently graduated Software Engineers the fundamentals of Python, including but not limited to - OOP in Python, functional programming, object model, memory model, unit-testing, packaging and surrounding ecosystem tools. Responsible for everything from course content and assignment creation to teaching and grading.
-}
-
-\NewEntry{\mbox{Aug'18}}{Linux Fundamentals \& Bash Scripting}
-
-\Description{\MarginText{Freelance Instructor}Taught a class of 40 recently graduated Software Engineers fundamental concepts of Unix operating systems, Bash scripting, Kernel internals and systems programming. Responsible for everything from course content and assignment creation, teaching and grading.
+\Description{\MarginText{Freelance Instructor}Taught a class of 40 recently graduated Software Engineers two courses. The first, a crash course in Python, covering - OOP in Python, functional programming, object model, memory model, unit-testing, packaging and surrounding ecosystem tools. The second, covering fundamental concepts of Unix operating systems, Bash scripting, Linux Kernel internals and systems programming.Responsible for everything from course content and assignment creation to teaching and grading.
 }
 
 %\pagebreak
@@ -282,23 +285,12 @@ $\cdotp$\ Director Automation \& QA \  $\cdotp$\ \ \href{mailto:cmtalbert@norepl
 
 \Description{\MarginText{Tower University}Instructor for an introductory course on version control, build
 systems, package managers, details of compilation and linking to campus graduate hires. Responsible for everything from course content and assignment creation, teaching and grading.
-
-% Responsibilities included:
-%     \begin{itemize}
-%         \item Teaching and prepation of course content.
-%         \item Creation and evalution of course assignments.
-%     \end{itemize}
 }
 
 \NewEntry{\mbox{May'13--May'15}}{Teaching Assistant, \textsc{IT Workshop-I}}
 
 \Description{\MarginText{IIIT-H}Taught the fundamentals of Linux, Shell Scripting and Javascript to
-a class of freshmen. Responsibilities included:
-    \begin{itemize}
-        \item Preparing content for and conducting labs for freshmen.
-        \item Creation and evalution of course assignments.
-        \item Mid-Term and Final exam evalution.
-    \end{itemize}
+a class of freshmen. Responsibilities included -- preparing content for and conducting labs for freshmen, creation and evalution of course assignments, mid-term and final exam evalution.
 }
 
 
@@ -313,7 +305,7 @@ a class of freshmen. Responsibilities included:
 %	VOLUNTEER EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\noindent\spacedlowsmallcaps{Volunteer Experience}\vspace{1em}
+\noindent\large\spacedlowsmallcaps{Volunteer Experience}\normalsize\vspace{1em}
 
 \NewEntry{\mbox{May'13--May'15}}{Head, \textsc{Open Source Development Group}}
 
