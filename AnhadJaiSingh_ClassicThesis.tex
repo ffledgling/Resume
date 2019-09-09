@@ -82,21 +82,39 @@
 \NewEntry{\mbox{Dec'18---}}{Tech Lead, Kubernetes}
 
 \Description{\MarginText{Tower Research}Leading a team of 3 engineers to
-    improve and architect the next generation of Kubernetes infrastructure at
-    Tower.
+    improve and architect the next generation of programmatic infrastructure at
+    Tower. Work so far:
+    \begin{itemize}
+        \item Plan, Design and Execute roll-out of programmatic SSL and PKI infrastructure, allowing
+            applications to auto-request and utilize SSL certificates for internal and external use.
+            Integration with Kubernetes secrets to make the process more seamless.
+        \item Revamp DNS infrastructure to be more programmatic, easily accessible, deployed and
+            more tightly integrated with Kubernetes and new PKI. (on-going)
+        \item Improving stability, scalability, operability and flexibility of existing Kubernetes
+            clusters. Work so far has involved- adding rack awareness to pods; enforcing ownership
+            and QoS information; stress testing the control plane; on-going attempt to add
+            auto-scaling for existing special workloads; Implement cgroup based service hierarchy
+            for node stability etc. (on-going)
+        \item Prototype, design and roll out secrets management service to move away from home grown
+            GPG encryption.
+    \end{itemize}
+    Day to day work involves lots of network debugging - eg. helping resolve typical issues like UDP
+    packet loss spikes, unreachable services, lost sourceIPs for traffic, metric loss due to
+    improper load-balancing etc; Code-reviews and design-reviews for new projects;
+    Python/Golang/Bash programming as necessary.
+
 }
 %------------------------------------------------
 
 \NewEntry{\mbox{Oct'17--Dec'18}}{Software Developer}
 
 \Description{\MarginText{AICrowd, EPFL}AICrowd, formerly CrowdAI - a project of EPFL, is a platform
-    hosting agent based AI/ML competitions to crowd source solutions to hard
-    problems in various domains of health, public transport, city planning etc.
-    I worked as a jack-of-all-trades engineer with responsibilities ranging
-    from optimizing our Gitlab on AWS infrastructure for scale to managing and
-    debugging our Kubernetes \& AWS infrastructureto rewriting the Python
-    backend used for multi-agent communication and evaluation of user contest
-    submissions.
+    hosting agent based AI/ML competitions to crowd source solutions to hard problems in various
+    domains of health, public transport, city planning etc.  I worked as a jack-of-all-trades
+    engineer with responsibilities ranging from optimizing our Gitlab for scale (>2000 users) to
+    managing and debugging our Kubernetes \& AWS infrastructure to rewriting the Python backend used
+    for contest submission evaluations and improving the client library used for multi-agent
+    communication and evaluation of user contest submissions.
 }
 
 \pagebreak[1]
@@ -129,7 +147,7 @@
 \NewEntry{\mbox{May'17--May'18}}{Tech Lead, Cloud Services}
 
 \Description{\MarginText{Tower Research}Worked as part of a division building out and driving adoption
-    of on-premise cloud infrastructure. Responsibilities included individual contributions,
+    of on-premise cloud infrastructure. Responsibilities included individual contributions to code,
     technical advisory for product teams regarding cloud migrations and container technology.
     Also responsible for structured training of new recruits and mentoring junior engineers within
     the team.
@@ -149,8 +167,8 @@
             API servers etc. onto Kubernetes/Cloud Infrastructure, acting as the primary point of
             communication and escalation.
     \end{itemize}
-    %Reference \#1: Neil \textsc{Tiwari}\ \ $\cdotp$\ Team Manager \ $\cdotp$\
-    %\href{mailto:ntiwari@noreply.com}{\textsc{Request Email}} \\
+    Reference \#1: Neil \textsc{Tiwari}\ \ $\cdotp$\ Team Manager \ $\cdotp$\
+    \href{mailto:ntiwari@noreply.com}{\textsc{Request Email}} \\
     %Reference \#2: Myung \textsc{Cho}\ \ $\cdotp$\ CTO \ $\cdotp$\
     %\href{mailto:mcho@noreply.com}{\textsc{Request Email}}}
 }
@@ -166,9 +184,9 @@ writing developer productivity tools, to on-call support and server administrati
 \begin{itemize}
     \item Designed and rolled out revamped, containerized build infrastructure for CI/CD using
         Docker, Kubernetes and Jenkins over 8 months, migrating over 300 jobs used by over 100
-        developers in the process. Evaluation involved setting up A/B testing and metrics collection
-        for the project, which showed a 35\% improvement in speed and a drastic reduction in
-        intermittent failures.
+        developers in the process. Risk minimization involved setting up A/B testing and metrics
+        collection for the project, which showed a 35\% improvement in speed and a drastic reduction
+        in intermittent failures.
     \item Wrote various components in Python for an in-house git based meta-SCM system for
         cross-repo dependencies, including the API server, test harness, and update notification
         system.
