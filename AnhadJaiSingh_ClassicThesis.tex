@@ -27,6 +27,7 @@
 \usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
 \usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
 \usepackage{fontawesome} % For fancy company logos, Github, LinkedIn, etc.
+\usepackage{xcolor}
 
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
 
@@ -39,6 +40,8 @@
 \vspace{0.5em}} % Add some white space after each new entry
 
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize\color{gray}Last updated on #1}}
 
 \date{} % Remove the date we get at the end of the CV
 %----------------------------------------------------------------------------------------
@@ -326,6 +329,7 @@ Institute of Information and Technology, Hyderabad}
 
 \thispagestyle{empty}
 %----------------------------------------------------------------------------------------
+\updateinfo
 
 \end{cv}
 
